@@ -1,0 +1,4 @@
+{
+    "conventionalCommits.autoCommit": false,
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+}

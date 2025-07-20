@@ -1,0 +1,32 @@
+{
+  "name": "37_poisson",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "root": "apps/37_poisson",
+  "sourceRoot": "37_poisson",
+  "projectType": "application",
+  "targets": {
+    "install": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm install",
+        "cwd": "apps/37_poisson"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["install"],
+      "options": {
+        "command": "npm run build",
+        "cwd": "apps/37_poisson"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["build"],
+      "options": {
+        "command": "npm run test",
+        "cwd": "apps/37_poisson"
+      }
+    }    
+  }
+}
